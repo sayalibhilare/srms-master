@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2021 at 11:28 AM
+-- Generation Time: Nov 04, 2021 at 11:43 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.21
 
@@ -62,9 +62,7 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`name`, `id`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `Total_marks`) VALUES
-('class1', 1, 100, 100, 100, 100, 100, 100, 600),
-('class2', 2, 100, 100, 100, 100, 100, 100, 600),
-('class3', 3, 100, 100, 100, 100, 100, 100, 600);
+('class1', 1, 100, 100, 100, 100, 100, 100, 600);
 
 -- --------------------------------------------------------
 
@@ -91,11 +89,7 @@ CREATE TABLE `result` (
 --
 
 INSERT INTO `result` (`name`, `rno`, `class`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `marks`, `percentage`) VALUES
-('sahil  bhilare', 1, 'class1', 63, 85, 90, 80, 75, 0, 479, 79.8333),
-('sahil  bhilare', 2, 'class2', 49, 89, 56, 78, 73, 0, 399, 66.5),
-('samiksha', 3, 'class2', 41, 42, 39, 42, 48, 36, 248, 41.3333),
-('krutika chavan', 3, 'class1', 41, 50, 46, 32, 21, 35, 225, 37.5),
-('kolekar', 4, 'class2', 78, 12, 56, 54, 86, 73, 359, 59.8333);
+('sahil  bhilare', 1, 'class1', 63, 50, 35, 86, 76, 0, 363, 60.5);
 
 -- --------------------------------------------------------
 
