@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.6
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 10, 2018 at 04:35 PM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Host: 127.0.0.1
+-- Generation Time: Nov 04, 2021 at 11:28 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -48,8 +47,24 @@ INSERT INTO `admin_login` (`userid`, `password`) VALUES
 
 CREATE TABLE `class` (
   `name` varchar(30) NOT NULL,
-  `id` int(3) NOT NULL
+  `id` int(3) NOT NULL,
+  `p1` int(3) NOT NULL,
+  `p2` int(3) NOT NULL,
+  `p3` int(3) NOT NULL,
+  `p4` int(3) NOT NULL,
+  `p5` int(3) NOT NULL,
+  `p6` int(3) NOT NULL,
+  `Total_marks` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`name`, `id`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `Total_marks`) VALUES
+('class1', 1, 100, 100, 100, 100, 100, 100, 600),
+('class2', 2, 100, 100, 100, 100, 100, 100, 600),
+('class3', 3, 100, 100, 100, 100, 100, 100, 600);
 
 -- --------------------------------------------------------
 
@@ -66,9 +81,21 @@ CREATE TABLE `result` (
   `p3` int(3) NOT NULL,
   `p4` int(3) NOT NULL,
   `p5` int(3) NOT NULL,
+  `p6` int(3) NOT NULL,
   `marks` int(3) NOT NULL,
   `percentage` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `result`
+--
+
+INSERT INTO `result` (`name`, `rno`, `class`, `p1`, `p2`, `p3`, `p4`, `p5`, `p6`, `marks`, `percentage`) VALUES
+('sahil  bhilare', 1, 'class1', 63, 85, 90, 80, 75, 0, 479, 79.8333),
+('sahil  bhilare', 2, 'class2', 49, 89, 56, 78, 73, 0, 399, 66.5),
+('samiksha', 3, 'class2', 41, 42, 39, 42, 48, 36, 248, 41.3333),
+('krutika chavan', 3, 'class1', 41, 50, 46, 32, 21, 35, 225, 37.5),
+('kolekar', 4, 'class2', 78, 12, 56, 54, 86, 73, 359, 59.8333);
 
 -- --------------------------------------------------------
 
@@ -81,6 +108,19 @@ CREATE TABLE `students` (
   `rno` int(3) NOT NULL,
   `class_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`name`, `rno`, `class_name`) VALUES
+('krutika chavan', 3, 'class1'),
+('sahil  bhilare', 1, 'class1'),
+('kolekar', 4, 'class2'),
+('pathu', 3, 'class2'),
+('sahil  bhilare', 2, 'class2'),
+('samiksha', 3, 'class2'),
+('kavita bh', 1, 'class3');
 
 --
 -- Indexes for dumped tables
