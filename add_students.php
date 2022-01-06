@@ -75,7 +75,7 @@
     </div>
 
     <div class="footer">
-        <!-- <span>&copy Designed & Coded By Jibin Thomas</span> -->
+        <!-- <span>&copy Designed & Coded By sayali</span> -->
     </div>
 </body>
 </html>
