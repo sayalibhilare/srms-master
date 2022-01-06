@@ -69,7 +69,7 @@
     </div>
 
     <div class="footer">
-        <!-- <span>Designed & Coded By Jibin Thomas</span> -->
+        <!-- <span>Designed by sayali</span> -->
     </div>
 </body>
 </html>
